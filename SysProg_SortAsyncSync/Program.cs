@@ -17,7 +17,7 @@ namespace SysProg_SortAsyncSync
             {
                 foreach(var item2 in item) 
                 {
-                    Console.Write(item +" ");
+                    Console.Write(item2 +" ");
                 }
                 Console.WriteLine();
             }
