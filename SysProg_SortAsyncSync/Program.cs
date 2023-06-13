@@ -32,7 +32,7 @@ namespace SysProg_SortAsyncSync
 
 
 
-        public static void RunSyncSort(int[][] _arr)
+        public static void RunASyncSort(int[][] _arr)
         {
             Stopwatch sw = new Stopwatch();
             sw.Start();
@@ -44,10 +44,10 @@ namespace SysProg_SortAsyncSync
 
            sw.Stop();
            
-            Console.WriteLine($"Elaplsed time(ticks) SYNC SORT  {sw.ElapsedTicks}");
+            Console.WriteLine($"Elaplsed time(ticks) ASYNC SORT  {sw.ElapsedTicks}");
         }
 
-        public static void AsyncSort(int[][] arr)
+        public static void SyncSort(int[][] arr)
         {
             Stopwatch sw = new Stopwatch();
             sw.Start();
@@ -59,7 +59,7 @@ namespace SysProg_SortAsyncSync
 
             sw.Stop();
 
-            Console.WriteLine($"Elaplsed time(ticks) ASYNC SORT  {sw.ElapsedTicks}");
+            Console.WriteLine($"Elaplsed time(ticks) SYNC SORT  {sw.ElapsedTicks}");
         }
 
 
@@ -91,9 +91,9 @@ namespace SysProg_SortAsyncSync
             Array.Copy(_arr, _arr2, _arr.Length);
       
 
-            RunSyncSort(_arr);
+            RunASyncSort(_arr);
 
-            AsyncSort(_arr2);
+            SyncSort(_arr2);
 
 
 
